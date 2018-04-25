@@ -18,12 +18,12 @@
                 <div class="col-sm-1 col-xs-0"></div>
                 <div class="col-sm-5 col-xs-12" id="to-eat">
                     <h2 class="text-center special">burgers to eat!</h2>
-
+            
                     <ul>
                         {{#each Burgers}} {{#unless devoured}}
                         <button type="submit" id="change-devour" class="btn btn-success btn-devour" data-id="{{id}}" data-newdevour="{{devour}}">Devour</button>
-                        <p class="para"> {{burger_name}} </p>
-                                      
+                        <p class="para"> {{burgername}} </p>
+
                         {{/unless}} {{/each}}
                     </ul>
                 </div>
@@ -33,7 +33,7 @@
                     <ul class="text-center">
 
                         {{#each Burgers}} {{#if devoured}}
-                        <p class="para" id="show-me"> {{this.burger_name}}</p>
+                        <p class="para" id="show-me"> {{burgername}}</p>
                         {{/if}} {{/each}}
 
                     </ul>
